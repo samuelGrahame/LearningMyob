@@ -38,25 +38,25 @@ namespace Myob
             btnClose.Location = new Vector2("(100% - 89px)", "(100% - 31px)");
 
             ButtonPanel = new Control();
-            ButtonPanel.Style.BackgroundColor = "white";
+            ButtonPanel.Style.backgroundColor = "white";
             ButtonPanel.Bounds = new Vector4(0, 0, "100%", 31);
 
             btnPrint = new SimpleButton() { Text = "Print", Enabled = false };
-            btnPrint.ClassList.Remove("control");
-            btnPrint.ClassList.Add("myob-btn");
+            btnPrint.ClassList.remove("control");
+            btnPrint.ClassList.add("myob-btn");
 
 
             btnSendTo = new SimpleButton() { Text = "Send To", Enabled = false };
-            btnSendTo.ClassList.Remove("control");
-            btnSendTo.ClassList.Add("myob-btn");
+            btnSendTo.ClassList.remove("control");
+            btnSendTo.ClassList.add("myob-btn");
             
             btnJournal = new SimpleButton() { Text = "Journal" };
-            btnJournal.ClassList.Remove("control");
-            btnJournal.ClassList.Add("myob-btn");
+            btnJournal.ClassList.remove("control");
+            btnJournal.ClassList.add("myob-btn");
 
             btnRegister = new SimpleButton() { Text = "Register" };
-            btnRegister.ClassList.Remove("control");
-            btnRegister.ClassList.Add("myob-btn");
+            btnRegister.ClassList.remove("control");
+            btnRegister.ClassList.add("myob-btn");
 
             ButtonPanel.AppendChildren(btnPrint, btnSendTo, btnJournal, btnRegister);
 
@@ -68,25 +68,25 @@ namespace Myob
 
             // 822, 474
             DataPanel = new Control() { Bounds = new Vector4(16, 73, "(100% - 32px)", "(100% - 119px)") };
-            DataPanel.ClassList.Add("form-base");
-            DataPanel.Style.BorderRadius = "3px";
-            DataPanel.Style.BackgroundColor = "white";
-            DataPanel.Style.BorderColor = "rgb(192, 192, 192)";
+            DataPanel.ClassList.add("form-base");
+            DataPanel.Style.borderRadius = "3px";
+            DataPanel.Style.backgroundColor = "white";
+            DataPanel.Style.borderColor = "rgb(192, 192, 192)";
 
             InnerDataPanel = new Control();
-            InnerDataPanel.Style.Background = "linear-gradient(to bottom, #edf7ff 0%,#cee7fc 51%,#b8dbf9 100%)";
-            InnerDataPanel.Style.BorderRadius = "3px";
+            InnerDataPanel.Style.background = "linear-gradient(to bottom, #edf7ff 0%,#cee7fc 51%,#b8dbf9 100%)";
+            InnerDataPanel.Style.borderRadius = "3px";
             InnerDataPanel.Bounds = new Vector4(3, 3, "(100% - 8px)", "(100% - 8px)");            
-            InnerDataPanel.Style.Border = "solid 1px rgb(192, 192, 192)";
+            InnerDataPanel.Style.border = "solid 1px rgb(192, 192, 192)";
 
             comboSalesLookup.OnTextChanged = (ti) => {
                 if((ti.Text + "").Trim().ToLower() == nameof(SalesType.Quote).ToLower())
                 {
-                    InnerDataPanel.Style.Background = "linear-gradient(to bottom, #fedee1 0%,#faccd1 52%,#f6b7bf 100%)";
+                    InnerDataPanel.Style.background = "linear-gradient(to bottom, #fedee1 0%,#faccd1 52%,#f6b7bf 100%)";
                 }
                 else
                 {
-                    InnerDataPanel.Style.Background = "linear-gradient(to bottom, #edf7ff 0%,#cee7fc 51%,#b8dbf9 100%)";
+                    InnerDataPanel.Style.background = "linear-gradient(to bottom, #edf7ff 0%,#cee7fc 51%,#b8dbf9 100%)";
                 }
             };
 
@@ -95,16 +95,16 @@ namespace Myob
             comboCustomerLookup.Size = new Vector2(250, 21);
 
             InternalPanel = new Control();
-            InternalPanel.Style.BorderRadius = "1px";
-            InternalPanel.Style.Border = "solid 1px rgb(192, 192, 192)";
-            InternalPanel.Style.BackgroundColor = "white";
+            InternalPanel.Style.borderRadius = "1px";
+            InternalPanel.Style.border = "solid 1px rgb(192, 192, 192)";
+            InternalPanel.Style.backgroundColor = "white";
             InternalPanel.Bounds = new Vector4(19, 37, "(100% - 40px)", "(100% - 190px)" );
 
 
             RefPanel = new Control();
-            RefPanel.Style.BorderRadius = "1px";
-            RefPanel.Style.Border = "solid 1px rgb(192, 192, 192)";
-            RefPanel.Style.BackgroundColor = "rgb(249, 242, 245)";
+            RefPanel.Style.borderRadius = "1px";
+            RefPanel.Style.border = "solid 1px rgb(192, 192, 192)";
+            RefPanel.Style.backgroundColor = "rgb(249, 242, 245)";
             RefPanel.Bounds = new Vector4(19, "(100% - 135px)", "(100% - 40px)", 96);
 
             InnerDataPanel.AppendChildren(comboCustomerLookup, InternalPanel, RefPanel);
